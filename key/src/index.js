@@ -4,6 +4,11 @@ import Redis from 'ioredis'
 const app = express()
 app.use(express.json())
 
+const redis = new Redis({
+    host: '127.0.0.1',
+    port: 6379
+})
+
 const key = 'key123'
 
 app.get('/set-key', async (req, res) => {

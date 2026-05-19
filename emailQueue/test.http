@@ -1,0 +1,14 @@
+### Send an email to the queue
+POST http://localhost:3000/send-email
+Content-Type: application/json
+
+{
+    "to": "user@example.com",
+    "subject": "Welcome to our platform!",
+    "body": "Hi there, thank you for signing up. We are glad to have you."
+}
+
+###
+
+### Process the next email in the queue
+GET http://localhost:3000/email/process
